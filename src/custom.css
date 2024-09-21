@@ -80,26 +80,6 @@ canvas {
 
 
 
-
-
-
-
-
-
-
-
-
-/*
-  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
-  box-shadow: [inset?] [top] [left] [blur] [size] [color];
-
-  Tips:
-    - We're setting all the blurs to 0 since we want a solid fill.
-    - Add the inset keyword so the box-shadow is on the inside of the element
-    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
-    - Multiple shadows can be stacked
-    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
-*/
 .raise:hover,
 .raise:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
@@ -143,7 +123,7 @@ code {
 
 
 
-/* UL */
+/* .list_stats */
 
 :root {
   --bg: hsl(0 0% 2%);
@@ -161,9 +141,9 @@ main {
   max-width: 100%;
 }
 
-ul {
+.list_stats {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -174,7 +154,7 @@ li {
   list-style-type: none;
 }
 
-ul::after {
+.list_stats::after {
   border-radius: 1rem;
   content: "";
   position: absolute;
@@ -189,14 +169,14 @@ ul::after {
   transition: inset 0.2s;
 }
 
-ul[data-enhanced]:hover {
+.list_stats[data-enhanced]:hover {
   --active: 1;
 }
-ul[data-enhanced]::after {
+.list_stats[data-enhanced]::after {
   opacity: var(--active, 0);
   transition: opacity 0.2s, inset 0.2s 0.2s;
 }
-ul[data-enhanced]:hover::after {
+.list_stats[data-enhanced]:hover::after {
   transition: opacity 0.2s 0.2s, inset 0.2s;
 }
 
@@ -212,7 +192,7 @@ ul[data-enhanced]:hover::after {
   :root:has(li:nth-of-type(3):hover) { --anchor: --ship; }
   :root:has(li:nth-of-type(4):hover) { --anchor: --profit; }  
 
-  ul::after {
+  .list_stats::after {
   	position-anchor: var(--anchor);
     inset:
       anchor(top)
@@ -221,14 +201,14 @@ ul[data-enhanced]:hover::after {
       anchor(left);
   }
 
-  ul:has(li:hover) {
+  .list_stats:has(li:hover) {
     --active: 1;
   }
-  ul::after {
+  .list_stats::after {
     opacity: var(--active, 0);
     transition: opacity 0.2s, inset 0.2s 0.2s;
   }
-  ul:hover::after {
+  .list_stats:hover::after {
     transition: opacity 0.2s 0.2s, inset 0.2s;
   }
   
@@ -238,7 +218,7 @@ ul[data-enhanced]:hover::after {
   }
 }
 
-ul:not([data-enhanced]) article::after {
+.list_stats:not([data-enhanced]) article::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -302,3 +282,22 @@ li:nth-of-type(1) { --hue: 30; }
 li:nth-of-type(2) { --hue: 280; }
 li:nth-of-type(3) { --hue: 210; }
 li:nth-of-type(4) { --hue: 120; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* TIMELINE */
