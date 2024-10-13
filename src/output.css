@@ -694,6 +694,14 @@ video {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[36px\] {
+  height: 36px;
+}
+
 .w-2\.5 {
   width: 0.625rem;
 }
@@ -712,6 +720,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[36px\] {
+  width: 36px;
 }
 
 .min-w-\[160px\] {
@@ -996,6 +1008,11 @@ video {
 
 .shadow-blue-700 {
   --tw-shadow-color: #1d4ed8;
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-\[\#121212\] {
+  --tw-shadow-color: #121212;
   --tw-shadow: var(--tw-shadow-colored);
 }
 

@@ -111,7 +111,7 @@ body, html {
 .card{
   border: 1px solid #121212;
   background-color: #121212;
-  box-shadow: inset 0 0 30px #00183b;
+  box-shadow: inset 0 0 20px #00112b;
   border-radius: 10px;
 }
 
