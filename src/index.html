@@ -9,409 +9,191 @@
     />
     <link href="output.css" rel="stylesheet" />
     <link rel="stylesheet" href="custom.css" />
+
+    
     <title>My Portfolio</title>
   </head>
-  <body class="text-white p-2 max-w-[1080px] mx-auto">
+  <body class="text-white p-3 max-w-[1080px] mx-auto">
     <section id="home">
-      <div class="content_home flex flex-col items-center md:flex-row gap-4">
-        <img
-          src="./images/developer.png"
+      <div class="content_home px-5 mt-[40px] flex flex-col lg:flex-row gap-6 items-center justify-between">
+          <img
+          src="./images/person.png"
           alt="developer mobile"
-          width="500px"
-          height="450px"
+          width="400px"
+          height="400px"
           class="drop-shadow-[0_10px_12px_rgba(0,0,0,0.7)]"
         />
-        <div class="flex-col justify-start">
-          <h1 class="my-2 text-red-900 font-bold">
+        <div class="flex-col ">
+          <h1 class="text-2xl font-bold tracking-tight text-blue-600 sm:text-4xl">
             Hi, I'm Developer Mobile
           </h1>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam
-            voluptates ex facere soluta eligendi est tempora explicabo quod
-            adipisci porro necessitatibus, vitae quidem rem eaque magnam.
-            Sapiente dolore eaque beatae!
-          </p>
-          <div class="my-3"></div>
-          <div class="buttons flex gap-2">
-            <a href="#" class="btn_go raise">Github</a>
-            <a href="#" class="btn_go raise">Linkedin</a>
-          </div>
+          <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+          <div class="my-4"></div>
+          <div class="flex gap-4 my-6">
+            <button class="custom-btn btn-3"><span>Github</span>
+              <button class="custom-btn btn-3"><span>Linkedin</span>
+          </div> 
         </div>
       </div>
     </section>
 
-    <section id="about" class="mt-4">
-      <div class="flex justify-start items-center mb-2">
-        <img
-          width="30px"
-          height="30px"
-          src="./images/info.png"
-          alt="Information"
-        />
-        <h2 class="text-start font-bold ml-2">About Me</h2>
-      </div>
-      <hr
-        class="my-2 border-0 h-[1px] bg-gradient-to-r from-red-500 via-red-600 to-red-950 relative"
-      />
-      <ul class="list_stats grid grid-cols-3">
-        <li class="relative">
-          <article
-            class="relative p-4 rounded-lg transition-opacity duration-200 hover:bg-opacity-90"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-gray-400"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"
-              />
-            </svg>
-            <h3 class="mt-2 text-lg font-light text-gray-300">Develop.</h3>
-            <p
-              class="mt-2 text-sm text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              alias fuga et ab magnam.
-            </p>
-          </article>
-        </li>
-        <li class="relative">
-          <article
-            class="relative p-4 rounded-lg transition-opacity duration-200 hover:bg-opacity-90"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-gray-400"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-3.75 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-3.75 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0118 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 016 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25C6 11.496 5.496 12 4.875 12M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M19.125 12h1.5m0 0c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h1.5m14.25 0h1.5"
-              />
-            </svg>
-            <h3 class="mt-2 text-lg font-light text-gray-300">Preview.</h3>
-            <p
-              class="mt-2 text-sm text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              alias fuga et ab magnam.
-            </p>
-          </article>
-        </li>
-
-        <li class="relative">
-          <article
-            class="relative p-4 rounded-lg transition-opacity duration-200 hover:bg-opacity-90"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 text-gray-400"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-3.5 0-6.594 1.222-9.37 3.253M19.843 7.582A9 9 0 0112 21m9-9a8.975 8.975 0 00-1.057-4.253M12 21a9 9 0 01-1.057-4.253m0 0A11.955 11.955 0 0012 10.5c-3.5 0-6.594 1.222-9.37 3.253m0 0A8.975 8.975 0 0112 21m-8.314-8.314l16.628 0"
-              />
-            </svg>
-            <h3 class="mt-2 text-lg font-light text-gray-300">Deploy.</h3>
-            <p
-              class="mt-2 text-sm text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              alias fuga et ab magnam.
-            </p>
-          </article>
-        </li>
-      </ul>
-      <div class="my-5"></div>
-      <div class="custom grid grid-cols-2 gap-2">
-        <div class="education p-4">
-          <h3 class="font-bold text-lg">TIMELINE</h3>
-          <div class="py-2"></div>
-          <div class="container_timeline">
-            <ul class="flex flex-col">
-              <li class="border-l-red-600 border-dotted border-l-2">
-                <div class="px-1 py-1">2022 - 2026</div>
-                <div class="content_li">
-                  <h3 class="pt-1 italic">BACHARELADO CIENCIA DA COMPUTAÇÃO</h3>
-                  <p
-                    class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum ullam delectus quam, impedit in ipsam!
-                  </p>
-                </div>
-              </li>
-              <li class="border-l-red-600 border-dotted border-l-2">
-                <div class="px-1 py-1">2023 -</div>
-                <div class="content_li">
-                  <h3 class="italic">CURSOS ONLINE</h3>
-                  <p
-                    class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum ullam delectus quam, impedit in ipsam!
-                  </p>
-                </div>
-              </li>
-              <li class="border-l-red-600 border-dotted border-l-2">
-                <div class="px-1 py-1">2019 - 2021</div>
-                <div class="content_li">
-                  <h3 class="italic">TÉCNICO DE INFORMATICA</h3>
-                  <p
-                    class="text-sm text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-                  >
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Voluptatum ullam delectus quam, impedit in ipsam!
-                  </p>
-                </div>
-              </li>
-            </ul>
+    <section id="about" class="my-[30px] px-5">
+      <div class="relative isolate overflow-hidden sm:py-10">
+        <div class="mx-auto max-w-7xl">
+          <div class="mx-auto max-w-2xl lg:mx-0">
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">About me</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
           </div>
-        </div>
-        <div class="skills p-4">
-          <div>
-            <h3 class="font-bold text-lg">LANGUAGES</h3>
-            <div class="py-2"></div>
-            <div class="content_lang">
-              <ul class="flex">
-                <li>
-                  <div
-                    class="w-[110px] h-[110px] rounded-full border-4 border-[#881d1d] flex flex-col items-center justify-center"
-                  >
-                    <span class="text-sm">PORTUGUÊS</span>
-                    <span
-                      class="text-sm font-thin text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-                      >NATIVO</span
-                    >
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="w-[110px] h-[110px] rounded-full border-4 border-[#881d1d] flex flex-col items-center justify-center"
-                  >
-                    <span class="text-sm">INGLÊS</span>
-                    <span
-                      class="text-sm font-thin text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-                      >M2</span
-                    >
-                  </div>
-                </li>
-                <li>
-                  <div
-                    class="w-[110px] h-[110px] rounded-full border-4 border-[#881d1d] flex flex-col items-center justify-center"
-                  >
-                    <span class="text-sm">ESPANHOL</span>
-                    <span
-                      class="text-sm font-thin text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-400"
-                      >BÁSICO</span
-                    >
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg">SKILLS / TOOLS</h3>
-            <div class="py-2"></div>
-            <div class="content_skills grid grid-cols-2 gap-2">
-              <div class="flex gap-3">
-                <div>
-                  <p class="text-sm font-thin">KOTLIN</p>
-                </div>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
+          <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">          
+            <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+              <div class="flex flex-col-reverse">
+                <dt class="text-base leading-7 text-gray-300">Offices worldwide</dt>
+                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">12</dd>
               </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">FIREBASE</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
+              <div class="flex flex-col-reverse">
+                <dt class="text-base leading-7 text-gray-300">Full-time colleagues</dt>
+                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">300+</dd>
               </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">SQLSERVER</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
+              <div class="flex flex-col-reverse">
+                <dt class="text-base leading-7 text-gray-300">Hours per week</dt>
+                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">40</dd>
               </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">JAVA</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
+              <div class="flex flex-col-reverse">
+                <dt class="text-base leading-7 text-gray-300">Paid time off</dt>
+                <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Unlimited</dd>
               </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">HTML</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
-              </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">CSS3</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
-              </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">JAVASCRIPT</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
-              </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">BOOTSTRAP</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
-              </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">FIGMA</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
-              </div>
-              <div class="flex gap-3">
-                <p class="text-sm font-thin">GIT / GITHUB</p>
-                <div class="flex items-center justify-center gap-2">
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                  <div
-                    class="circle w-[12px] h-[12px] bg-white rounded-full"
-                  ></div>
-                </div>
-              </div>
-            </div>
+            </dl>
           </div>
         </div>
       </div>
-    </section>
-
-    <section id="projects" class="mt-6 w-full">
-      <h2>Portfolio</h2>
+      <ol class="items-center md:grid md:grid-cols-2 lg:flex  my-[90px] mx-auto max-w-7xl">
+        <li class="relative mb-6 lg:mb-0 mx-auto max-w-2xl lg:mx-0">
+          <div class="flex items-center">
+              <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                  </svg>
+              </div>
+              <div class="hidden lg:flex w-full bg-blue-500 h-0.5 dark:bg-blue-700"></div>
+          </div>
+          <div class="mt-3 sm:pe-8">
+              <h3 class="text-lg font-semibold text-blue-900 dark:text-white py-3">Ciencia da Computação</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 2, 2021</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+          </div>
+        </li>
+        <li class="relative mb-6 lg:mb-0 mx-auto max-w-2xl lg:mx-0">
+          <div class="flex items-center">
+              <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                  </svg>
+              </div>
+              <div class="hidden lg:flex w-full bg-blue-500 h-0.5 dark:bg-gray-700"></div>
+          </div>
+          <div class="mt-3 sm:pe-8">
+              <h3 class="text-lg font-semibold text-blue-900 dark:text-white py-3">Cursos Online</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on December 23, 2021</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+          </div>
+        </li>
+        <li class="relative mb-6 lg:mb-0 mx-auto max-w-2xl lg:mx-0">
+          <div class="flex items-center">
+              <div class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
+                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                  </svg>
+              </div>
+              <div class="hidden lg:flex w-full bg-blue-500 h-0.5 dark:bg-gray-700"></div>
+          </div>
+          <div class="mt-3 sm:pe-8">
+              <h3 class="text-lg font-semibold text-blue-900 dark:text-white py-3">Curso Técnico Informática</h3>
+              <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Released on January 5, 2022</time>
+              <p class="text-base font-normal text-gray-500 dark:text-gray-400">Get started with dozens of web components and interactive elements.</p>
+          </div>
+        </li>
+      </ol>
+      <div class="component bg-black mx-1 md:mx-10">
+        <blockquote class="relative text-white text-center p-5 md:p-10 w-full m-1">
+          It's good to meet you, Dr. Banner. Your work on anti-electron collisions is unparalleled. And I’m a huge
+          fan of the way you lose control and turn into an enormous green rage monster.
+          <cite> - Tony Stark</cite>
+        </blockquote>
+      </div>
+      <div class="my-[40px]">
+        <h2 class="italic text-lg my-4 text-blue-700">--- Main Stacks / Main Tools</h2>
+        <div class="grid ssm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Kotlin</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-firebase-plain colored"></i>
+            <span>Firebase</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-androidstudio-plain colored"></i>
+            <span>Android Studio</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-git-plain colored"></i>
+            <span>Git</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-github-original"></i>
+            <span>Github</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-github-original"></i>
+            <span>Figma</span>
+          </div>
+        </div>
+        <h2 class="italic text-lg my-4 text-blue-700">--- Tools / Stacks</h2>
+        <div class="grid ssm:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Html5</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Css3</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Javascript</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Bootstrap</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Tailwind</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Kotlin</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>SqlServer</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Firebase</span>
+          </div>
+          <div class="h-[60px] flex justify-start items-center gap-2 shadow-md shadow-blue-700 px-4 bg-[#121212] border-2 border-blue-700 rounded-sm  min-w-[160px]">
+            <i class="text-4xl devicon-kotlin-plain colored"></i>
+            <span>Figma</span>
+          </div>
+        </div>
+      </div>
+    <section id="projects" class="mt-[60px] w-full px-5">
+      
+      <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Portfolio</h2>
       <p>See My Works - Lorem ipsum dolor</p>
       <div class="my-4"></div>
-      <ul class="flex justify-center flex-wrap">
+      <ul class="flex flex-col lg:flex-row justify-center">
         <li>
           <a href="#" class="active-portfolio" data-filter="*">All </a>
         </li>
@@ -426,111 +208,106 @@
         </li>
       </ul>
       <div class="my-4"></div>
-      <div class="portfolio-container grid grid-cols-2 gap-4 my-6">
-        <div class="portfolio-item designing p-1 shadow-[inset_3px_-3px_10px_rgba(244,244,244,0.2)] hover:border-[rgb(136,29,29)] hover:shadow-[#881d1d] transition-shadow rounded-md">
-          <div class="showMeOnhover">
-            <h3 class="font-bold text-lg underline mb-3">Designing Project 1</h3>
-            <p class="text-sm ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, velit.</p>
-            <ul class="flex gap-2 my-2 flex-wrap">
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">HTML</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">CSS</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">JAVASCRIPT</li>
-            </ul>
-            <div class="flex gap-4">
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">GITHUB</a>
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">DETAILS</a>
+      <div class="portfolio-container grid grid-cols-1 gap-4 my-6 md:grid-cols-3">
+        <div class="card h-[325px] p-5 flex flex-col">
+          <div class="w-[50px] h-[50px] bg-black shadow-md shadow-black rounded-lg"></div>
+          <div class="my-3"></div>
+          <span class="text-blue-700">Titulo - BurgerAPP</span>
+          <div class="h-full flex flex-col justify-around">
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe?</p>
+            <div class="card_btns">
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Github</a>
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Details</a>
             </div>
-          </div>          
+          </div>
         </div>
-        <div class="portfolio-item graphic p-1 shadow-[inset_3px_-3px_10px_rgba(244,244,244,0.2)] hover:border-[rgb(136,29,29)] hover:shadow-[#881d1d] transition-shadow rounded-md">
-          <div class="showMeOnhover">
-            <h3 class="font-bold text-lg underline mb-3">Designing Project 1</h3>
-            <p class="text-sm ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, velit.</p>
-            <ul class="flex gap-2 my-2 flex-wrap">
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">HTML</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">CSS</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">JAVASCRIPT</li>
-            </ul>
-            <div class="flex gap-4">
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">GITHUB</a>
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">DETAILS</a>
+        <div class="card h-[325px] p-5 flex flex-col">
+          <div class="w-[50px] h-[50px] bg-black shadow-md shadow-black rounded-lg"></div>
+          <div class="my-3"></div>
+          <span class="text-blue-700">Titulo - BurgerAPP</span>
+          <div class="h-full flex flex-col justify-around">
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe?</p>
+            <div class="card_btns">
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Github</a>
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Details</a>
             </div>
-          </div> 
+          </div>
         </div>
-        <div class="portfolio-item websites p-1 shadow-[inset_3px_-3px_10px_rgba(244,244,244,0.2)] hover:border-[#881d1d] hover:shadow-[#881d1d] transition-shadow rounded-md">
-          <div class="showMeOnhover">
-            <h3 class="font-bold text-lg underline mb-3">Designing Project 1</h3>
-            <p class="text-sm ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, velit.</p>
-            <ul class="flex gap-2 my-2 flex-wrap">
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">HTML</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">CSS</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">JAVASCRIPT</li>
-            </ul>
-            <div class="flex gap-4">
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">GITHUB</a>
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">DETAILS</a>
+        <div class="card h-[325px] p-5 flex flex-col">
+          <div class="w-[50px] h-[50px] bg-black shadow-md shadow-black rounded-lg"></div>
+          <div class="my-3"></div>
+          <span class="text-blue-700">Titulo - BurgerAPP</span>
+          <div class="h-full flex flex-col justify-around">
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe?</p>
+            <div class="card_btns">
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Github</a>
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Details</a>
             </div>
-          </div> 
+          </div>
         </div>
-        <div class="portfolio-item designing p-1 shadow-[inset_3px_-3px_10px_rgba(244,244,244,0.2)] hover:border-[#881d1d] hover:shadow-[#881d1d] transition-shadow rounded-md">
-          <div class="showMeOnhover">
-            <h3 class="font-bold text-lg underline mb-3">Designing Project 1</h3>
-            <p class="text-sm ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, velit.</p>
-            <ul class="flex gap-2 my-2 flex-wrap">
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">HTML</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">CSS</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">JAVASCRIPT</li>
-            </ul>
-            <div class="flex gap-4">
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">GITHUB</a>
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">DETAILS</a>
+        <div class="card h-[325px] p-5 flex flex-col">
+          <div class="w-[50px] h-[50px] bg-black shadow-md shadow-black rounded-lg"></div>
+          <div class="my-3"></div>
+          <span class="text-blue-700">Titulo - BurgerAPP</span>
+          <div class="h-full flex flex-col justify-around">
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe?</p>
+            <div class="card_btns">
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Github</a>
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Details</a>
             </div>
-          </div> 
+          </div>
         </div>
-        <div class="portfolio-item graphic p-1 shadow-[inset_3px_-3px_10px_rgba(244,244,244,0.2)] hover:border-[#881d1d] hover:shadow-[#881d1d] transition-shadow rounded-md">
-          <div class="showMeOnhover">
-            <h3 class="font-bold text-lg underline mb-3">Designing Project 1</h3>
-            <p class="text-sm ">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis, velit.</p>
-            <ul class="flex gap-2 my-2 flex-wrap">
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">HTML</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">CSS</li>
-              <li class="p-0 border-2 border-[#551111] px-2 text-[#551111] rounded-md text-sm">JAVASCRIPT</li>
-            </ul>
-            <div class="flex gap-4">
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">GITHUB</a>
-              <a rel="float-shadow" href="#" class="button float-shadow mt-4 hover:text-red-600 tracking-[.5px]">DETAILS</a>
+        <div class="card h-[325px] p-5 flex flex-col">
+          <div class="w-[50px] h-[50px] bg-black shadow-md shadow-black rounded-lg"></div>
+          <div class="my-3"></div>
+          <span class="text-blue-700">Titulo - BurgerAPP</span>
+          <div class="h-full flex flex-col justify-around">
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe?</p>
+            <div class="card_btns">
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Github</a>
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Details</a>
             </div>
-          </div> 
+          </div>
+        </div>
+        <div class="card h-[325px] p-5 flex flex-col">
+          <div class="w-[50px] h-[50px] bg-black shadow-md shadow-black rounded-lg"></div>
+          <div class="my-3"></div>
+          <span class="text-blue-700">Titulo - BurgerAPP</span>
+          <div class="h-full flex flex-col justify-around">
+            <p class="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. In, saepe?</p>
+            <div class="card_btns">
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Github</a>
+              <a class="px-4 py-1 rounded-md shadow-md shadow-black" href="#">Details</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    
-
-<footer class="w-full shadow dark:bg-gray-800">
-    <div class="w-full p-4 md:flex md:items-center md:justify-between">
-      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400 flex gap-2">© 2024 <a class="text-gray-200 hover:text-red-900" href="#">
-        Portfolio by Rafael
-      </a>
-      <img class="w-4 h-4" src="./images/svg_fire.svg" alt="svg_fire">
-      </span>
-      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-          <li>
-              <a href="#" class="hover:underline me-4 md:me-6">
-                <i class="devicon devicon-github-original"></i>
-                Github
-              </a>
-          </li>
-          <li>
-              <a href="#" class="hover:underline me-4 md:me-6">
-                <i class="devicon devicon-linkedin-plain"></i>
-                Linkedin
-              </a>
-          </li>
-      </ul>
-    </div>
-</footer>
-
-    
+  
+    <footer class="w-full shadow dark:bg-gray-800">
+      <div class="w-full p-4 lg:flex md:items-center md:justify-between">
+        <span class="text-sm justify-center text-gray-500 sm:text-center dark:text-gray-400 flex gap-2">© 2024 
+          <a class="text-gray-200 hover:text-blue-900" href="#">
+            Portfolio by Rafael
+          </a>
+          <img class="w-4 h-4" src="./images/svg_fire.svg" alt="svg_fire">
+        </span>
+        <ul class="flex items-center justify-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <li>
+                <a href="#" class="me-4 md:me-6 flex items-center gap-2 hover:text-blue-900">
+                  <i class="devicon_ devicon-github-original"></i>
+                  Github
+                </a>
+            </li>
+            <li>
+                <a href="#" class="me-4 md:me-6 flex items-center gap-2 hover:text-blue-900">
+                  <i class="devicon_ devicon-linkedin-plain"></i>
+                  Linkedin
+                </a>
+            </li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
     <script src="script.js"></script>

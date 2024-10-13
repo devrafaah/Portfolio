@@ -2,9 +2,10 @@
 
 :root {
   --font-family: "JetBrains Mono", monospace;
-  --color-default: red;
+  --color-default: blue;
   --color-secundary: rgb(255, 121, 121);
   --color-alternative: black;
+  --bg: #080808;
 
   --text-size-title: 30px;
   --text-size-subtitle: 25px; 
@@ -20,268 +21,43 @@ p {
     font-size: var(--text-size-description);
 }
 body, html {
+  background: var(--bg);
   font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
-canvas {
-  width: 100%;
-  height: 45vh;
-  left: 0;
-}
 
-/* Applying CSS to sphere */
-.tagcloud {
-  left: 0px;
-  display: block;
-  width: 100vw;
-  height: 300px; /* Altura padrão */
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 16px; /* Tamanho de fonte padrão */
+/*card list stats */
+.container_cardstats{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: 30px;
 }
-
-/* Responsividade */
-@media (max-width: 1024px) {
-  .tagcloud {
-      height: 250px; /* Reduz a altura em telas médias */
-      font-size: 14px; /* Reduz o tamanho da fonte */
-  }
+.cardstats{
+  box-shadow: 10px 10px 20px black;
+  border-radius: 10px;
 }
-
-@media (max-width: 768px) {
-  .tagcloud {
-      height: 200px; /* Reduz ainda mais a altura em telas pequenas */
-      font-size: 12px; /* Tamanho de fonte menor */
-  }
-}
-
-/* Change color of each text in sphere on hover */
-.tagcloud--item:hover {
-  color: #FFC300;
-}
-
-
-.custom-shadow {
-  @apply drop-shadow-xl shadow-2xl;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
-}
-
-
-.raise {
-  --color: #881d1d;
-  --hover: #881d1d;
-}
-.btn_go {
-  color: var(--color);
-  transition: 0.25s;
-}
-.btn_go:hover, .btn_go:focus {
-  border-color: var(--hover);
-  color: #fff;
-}
-
-
-
-.btn_go {
-  background: none;
-  border: 2px solid;
-  font: inherit;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 1em 2em;
-}
-
-code {
-  color: #881d1d;
-  font: inherit;
-}
-
-
-
-
-
-
-
-
-/* .list_stats */
-
-:root {
-  --bg: hsl(0 0% 2%);
-}
-
-body {
-  display: grid;
-  place-items: center;
-  min-height: 100vh;
-  background: var(--bg);
-}
-
-main {
-  width: 60ch;
-  max-width: 100%;
-}
-
-.list_stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  padding: 1rem;
-  list-style-type: none;
-}
-
-.list_stats::after {
-  border-radius: 1rem;
-  content: "";
-  position: absolute;
-  background: hsl(0 0% 10%);
-  pointer-events: none;
-  z-index: -2;
-  inset:
-    calc(var(--top) * 1px)
-    calc(100% - (var(--right) * 1px))
-    calc(100% - (var(--bottom) * 1px))
-    calc(var(--left) * 1px);
-  transition: inset 0.2s;
-}
-
-.list_stats[data-enhanced]:hover {
-  --active: 1;
-}
-.list_stats[data-enhanced]::after {
-  opacity: var(--active, 0);
-  transition: opacity 0.2s, inset 0.2s 0.2s;
-}
-.list_stats[data-enhanced]:hover::after {
-  transition: opacity 0.2s 0.2s, inset 0.2s;
-}
-
-@supports(anchor-name: --anchor) {
-  li:nth-of-type(1) article { anchor-name: --develop; }
-  li:nth-of-type(2) article { anchor-name: --preview; }
-  li:nth-of-type(3) article { anchor-name: --ship; }
-  li:nth-of-type(4) article { anchor-name: --profit; }
-
-  :root { --anchor: --develop; }
-  :root:has(li:nth-of-type(1):hover) { --anchor: --develop; }
-  :root:has(li:nth-of-type(2):hover) { --anchor: --preview; }
-  :root:has(li:nth-of-type(3):hover) { --anchor: --ship; }
-  :root:has(li:nth-of-type(4):hover) { --anchor: --profit; }  
-
-  .list_stats::after {
-  	position-anchor: var(--anchor);
-    inset:
-      anchor(top)
-      anchor(right)
-      anchor(bottom)
-      anchor(left);
-  }
-
-  .list_stats:has(li:hover) {
-    --active: 1;
-  }
-  .list_stats::after {
-    opacity: var(--active, 0);
-    transition: opacity 0.2s, inset 0.2s 0.2s;
-  }
-  .list_stats:hover::after {
-    transition: opacity 0.2s 0.2s, inset 0.2s;
-  }
-  
-  article::after {
-    content: unset;
-    display: none;
-  }
-}
-
-.list_stats:not([data-enhanced]) article::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background: hsl(0 0% 10%);
-  border-radius: 1rem;
-  opacity: var(--li-active, 0);
-  transition: opacity 0.2s;
-}
-
-article {
-  color: hsl(0 0% 80%);
-  padding: 1rem;
-  display: grid;
-  gap: 0.5rem;
+.container_cardstats ul li {
   position: relative;
 }
-
-article::before {
-  content: "";
+.dotted{
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(var(--bg) 0 2px, transparent 2px 38px) -20px -20px / 40px 40px,
-    linear-gradient(90deg, var(--bg) 0 2px, transparent 2px 38px) -20px -20px / 40px 40px;
-  mask: linear-gradient(-35deg, var(--bg) 0%, transparent 45%);
-  z-index: -1;
-  opacity: var(--li-active, 0);
-  transition: opacity 0.2s;
+  left: -9px;
+  top: 15px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
 }
 
-li:hover {
-  --li-active: 1;
+@media (max-width:450px) {
+  .content_skills{
+    grid-template-columns: repeat(1, minmax(0, 1fr))
+  }
+  .content_lang ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
-article h3 {
-  margin: 0;
-  font-weight: 120;
-}
-
-article p {
-  margin: 0;
-  text-wrap: pretty;
-  background: linear-gradient(hsl(0 0% 80%), hsl(0 0% 50%));
-  color: transparent;
-  background-clip: text;
-  font-weight: 80;
-}
-
-article svg {
-  width: 44px;
-}
-
-article svg path {
-  stroke-width: 0.75;
-  stroke: hsl(var(--hue, 30) calc(var(--li-active, 0) * 60%) 60%);
-  transition: stroke 0.2s;
-}
-
-li:nth-of-type(1) { --hue: 30; }
-li:nth-of-type(2) { --hue: 280; }
-li:nth-of-type(3) { --hue: 210; }
-li:nth-of-type(4) { --hue: 120; }
 
 
 
@@ -289,48 +65,6 @@ li:nth-of-type(4) { --hue: 120; }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.portfolio-nav{
-	text-align: center;
-	margin-bottom: 50px;
-}
-
-.portfolio-nav ul{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.portfolio-nav ul li{
-	display: inline-block;
-}
-
-.portfolio-nav ul li a{
-	display: block;
-	background: #222;
-	color: #707070;
-	padding: 6px 20px;
-	border: 1px solid #333;
-	margin: 0 4px;
-	transition: all 0.4s;
-}
-
-.portfolio-nav ul li a.active-portfolio{
-	background: #ff5d56;
-	color: #fff;
-	border-color: #ff5d56;
-}
 
 
 
@@ -338,7 +72,8 @@ li:nth-of-type(4) { --hue: 120; }
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 250px;
+  width: 100%;
+  height: 650px;
 }
 .portfolio-item .showMeOnhover {
   display: flex;
@@ -355,7 +90,7 @@ li:nth-of-type(4) { --hue: 120; }
 
 .active-portfolio {
   font-weight: bold;
-  color: rgb(168, 2, 2);
+  color: rgb(4, 16, 126);
 }
 
 #projects ul li a {
@@ -373,73 +108,167 @@ li:nth-of-type(4) { --hue: 120; }
 
 
 
-
-
-
-
-
-
-
-
-/* Float Shadow */
-.float-shadow {
-  display: inline-block;
-  position: relative;
-  transition-duration: 0.3s; /* Defina o valor de transição que deseja */
-  transition-property: transform;
-  
-  /* Remove highlight ao toque */
-  -webkit-tap-highlight-color: transparent;
-  
-  /* Acelerando o uso de hardware */
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
-  
-  /* Melhorando anti-aliasing */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Sombra antes do hover */
-  &:before {
-    pointer-events: none;
-    position: absolute;
-    z-index: -1;
-    content: '';
-    top: 100%;
-    left: 5%;
-    height: 10px;
-    width: 90%;
-    opacity: 0;
-    background: radial-gradient(ellipse at center, rgba(175, 3, 3, 0.35) 0%, rgba(197, 6, 6, 0) 80%);
-    transition-duration: 0.3s; /* Duração da transição */
-    transition-property: transform, opacity;
-  }
-
-  /* Efeito de hover */
-  &:hover {
-    transform: translateY(-5px);
-
-    &:before {
-      opacity: 1;
-      transform: translateY(5px);
-    }
-  }
+.card{
+  border: 1px solid #121212;
+  background-color: #121212;
+  box-shadow: inset 0 0 30px #00183b;
+  border-radius: 10px;
 }
 
 
 
 
-.devicon {
+
+
+.devicon_ {
   font-size: 25px;
 }
-
 
 /* Estilização base do container de portfólio */
 .portfolio-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
-.btnDetails {
- 
+
+
+
+
+
+.btn_go {
+
+}
+.btn_go:hover {
+  box-shadow: 0px 20px 25px #3d1818;
+  background-color: rgb(173, 1, 1);
+}
+
+
+
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 12px 0px rgba(1, 4, 192, 0.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+/* 3 */
+.btn-3 {
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+
+
+.component {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+}
+
+blockquote {
+  background:
+    linear-gradient(to right, #039be5 6px, transparent 4px) 0 100%,
+    linear-gradient(to left, #039be5 6px, transparent 4px) 100% 0,
+    linear-gradient(to bottom, #039be5 6px, transparent 4px) 100% 0,
+    linear-gradient(to top, #039be5 6px, transparent 4px) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+
+/* -- create the quotation marks -- */
+blockquote:before,
+blockquote:after {
+  font-family: FontAwesome;
+  position: absolute;
+  color: #039be5;
+  font-size: 34px;
+}
+
+blockquote:before {
+  content: "\f10d";
+  top: -12px;
+  margin-right: -20px;
+  right: 100%;
+}
+
+blockquote:after {
+  content: "\f10e";
+  margin-left: -20px;
+  left: 100%;
+  top: auto;
+  bottom: -20px;
 }
