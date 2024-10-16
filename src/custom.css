@@ -58,18 +58,6 @@ body, html {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .portfolio-item.hidden {
   display: none;
 }
@@ -85,20 +73,6 @@ body, html {
   background-color: #121212;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .devicon_ {
   font-size: 25px;
 }
@@ -109,20 +83,10 @@ body, html {
   gap: 1rem;
 }
 
-
-
-
-
-.btn_go {
-
-}
 .btn_go:hover {
   box-shadow: 0px 20px 25px #3d1818;
   background-color: rgb(173, 1, 1);
 }
-
-
-
 
 .custom-btn {
   width: 130px;
@@ -211,8 +175,6 @@ body, html {
 .btn-3 span:hover:after {
   width: 100%;
 }
-
-
 
 .component {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
