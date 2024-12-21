@@ -10,6 +10,10 @@
   --text-size-title: 30px;
   --text-size-subtitle: 25px; 
   --text-size-description: 16px;
+
+  --card-height: 350px;
+  --card-width: 250px;
+  --rotate: 132deg;
 }
 h1 {
     font-size: var(--text-size-title);
@@ -212,4 +216,105 @@ blockquote:after {
   left: 100%;
   top: auto;
   bottom: -20px;
+}
+
+
+
+
+.project {
+  border: 1px solid var(--gray);
+  margin: 18px 6px;
+}
+.project__links {
+  display: flex;
+  gap: 0.8rem;
+}
+.project__image {
+  border-bottom: 1px solid var(--gray);
+  aspect-ratio: 16/9;
+}
+.project__content {
+  padding: 1rem;
+}
+.project__name {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.project__description {
+  color: var(--gray);
+  padding: 1.5rem 0;
+  margin-bottom: 1.2rem;
+  margin: 2px 0;
+}
+.project__techs {
+  background: var(--gray-op);
+  color: var(--primary);
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  gap: 0.8rem 1.6rem;
+  padding: 2px;
+  justify-content: center;
+  align-content: center;
+  font-size: 1.6rem;
+}
+.project:hover {
+  box-shadow: 1rem;
+  transform: scale(1.04);
+  transition: transform 0.15s ease-in;
+}
+
+.project-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1024px) {
+  .project-list {
+    align-items: start;
+    gap: 1.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    margin-top: 4.8rem;
+  }
+}
+
+.skill-block {
+  border: 1px solid var(--gray);
+  display: inline-block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 30rem;
+  min-width: 200px;
+}
+.skill-block__name {
+  background: var(--gray-op);
+  border-bottom: 1px solid var(--gray);
+  color: var(--gray);
+  font-weight: 700;
+  padding: 0 1rem;
+}
+.skill-block__listz {
+  align-items: start;
+  color: var(--gray);
+  display: block;
+  flex-wrap: wrap;
+  font-weight: 600;
+  gap: 0.8rem;
+  justify-content: start;
+}
+
+.skill-arrow {
+  color: var(--gray);
+  margin: 0 0.2rem;
+}
+
+@media (max-width: 500px) {
+  .skill-block {
+    border: 1px solid var(--gray);
+    margin-bottom: 1.6rem;
+    max-width: 100%;
+    width: 100%;
+  }
 }
