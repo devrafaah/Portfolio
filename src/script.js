@@ -23,3 +23,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
   
+
+
+
+
+
+// Referências aos elementos
+const menuToggle = document.getElementById('menuToggle');
+const menu = document.getElementById('menu');
+const menuItems = document.querySelectorAll('.menu-item');
+
+// Alternar visibilidade do menu no mobile
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('hidden'); // Mostra/oculta o menu
+});
+
+// Fechar o menu ao clicar em qualquer item
+menuItems.forEach((item) => {
+  item.addEventListener('click', () => {
+    menu.classList.add('hidden');
+  });
+});

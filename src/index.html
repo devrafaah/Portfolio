@@ -4,49 +4,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./images/logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link href="output.css" rel="stylesheet" />
   <link rel="stylesheet" href="custom.css" />
-
-
-  <title>My Portfolio</title>
+  <title>Meu Portfolio</title>
 </head>
 
 <body>
-  <div class="fixed flex justify-end items-center gap-2 z-[999] mx-auto w-full h-[50px] bg-black p-4">
-    <select id="small" class=" p-1 px-2 text-sm shadow-sm shadow-white text-white border rounded-lg bg-black focus:ring-blue-500 focus:border-white ">
-      <option class="font-bold bg-black text-white" value="PT">PT</option>
-      <option class="font-bold bg-black text-white" value="EN">EN</option>
-    </select>
+  <div class="fixed top-0 w-full bg-black text-white z-50">
+    <div class="container mx-auto px-4 flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="logo flex items-center">
+        <img src="./images/logo.png" alt="Logo" class="w-10 h-10">
+        <span class="ml-2 font-bold text-lg">RafaDev</span>
+      </div>
+      <!-- Botão para mobile -->
+      <button id="menuToggle" class="md:hidden text-white focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+          class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+      <!-- Menu -->
+      <div id="menu"
+        class="hidden absolute py-2 md:relative top-16 md:top-0 left-0 w-full bg-black md:bg-transparent md:w-auto md:flex md:gap-6">
+        <ul class="flex flex-col md:flex-row gap-4 md:gap-6 text-center items-center p-4 md:p-0">
+          <li><a href="#home" id="item_home_menu" class="menu-item hover:text-blue-500">Home</a></li>
+          <li><a href="#about" id="item_about_menu" class="menu-item hover:text-blue-500">About</a></li>
+          <li><a href="#skills" id="item_skills_menu" class="menu-item hover:text-blue-500">hablidades</a></li>
+          <li><a href="#portfolio" id="items_portfolio_menu" class="menu-item hover:text-blue-500">Portfolio</a></li>
+        </ul>
+        <!-- Seletor de idioma -->
+        <div class="flex justify-center md:justify-start mt-4 md:mt-0">
+          <select id="languageSelect" class="p-2 text-black rounded-lg">
+            <option value="PT" selected>Português</option>
+            <option value="EN">English</option>
+            <option value="ES">Español</option>
+          </select>
+        </div>
+      </div>
+    </div>
   </div>
+
   <div class="p-4 max-w-[1080px] mx-auto">
-    <section id="home" class="lg:px-4">
+    <section id="home" class="lg:px-4 pt-20">
       <div class="content_home px-3 mt-[40px] flex flex-col lg:flex-row gap-6 items-center justify-between">
         <img src="./images/person.png" alt="developer mobile" width="400px" height="400px"
           class="drop-shadow-[0_10px_12px_rgba(0,0,0,0.7)]" />
         <div class="flex-col max-w-3xl">
-          <h1 class="text-2xl font-bold tracking-tight text-blue-600 sm:text-4xl">
+          <h1 id="title_h" class="text-2xl font-bold tracking-tight text-blue-600 sm:text-4xl">
             Olá, Sou Desenvolvedor Mobile
           </h1>
-          <p class="mt-6 text-lg leading-8 text-gray-300">
+          <p id="description_h" class="mt-6 text-lg leading-8 text-gray-300">
             Sou Rafael Silva, um desenvolvedor mobile apaixonado por criar soluções eficientes, inovadoras, funcionais e
             criativas.
           </p>
           <div class="my-4"></div>
           <div class="flex gap-4 my-6">
-            <button class="custom-btn btn-3"><span>Github</span>
-              <button class="custom-btn btn-3"><span>Linkedin</span>
+            <button id="github_h" class="custom-btn btn-3"><span>Github</span>
+              <button id="linkedin_h" class="custom-btn btn-3"><span>Linkedin</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="my-[30px] px-3 lg:px-4">
+    <section id="about" class="my-[30px] px-3 lg:px-4 pt-20">
       <div id="caracteristicas" class="relative isolate overflow-hidden sm:py-10 lg:px-4">
         <div class="mx-auto max-w-7xl">
           <div id="sobre_mim" class="mx-auto max-w-3xl lg:mx-0">
-            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">About me</h2>
-            <p class="mt-6 text-lg leading-8 text-gray-300">
+            <h2 id="title_s" class="text-4xl font-bold tracking-tight text-white sm:text-6xl">About me</h2>
+            <p id="description_s" class="mt-6 text-lg leading-8 text-gray-300">
               Possuo experiência em Kotlin, Android Studio, e Firebase, meu foco é construir aplicativos que aprimorem a
               experiência do usuário e resolvam problemas reais.
             </p>
@@ -54,49 +82,71 @@
           <div id="caracteristicas" class="mx-auto max-w-3xl mt-10 lg:mx-0 lg:max-w-none">
             <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-2">
               <div class="flex flex-col-reverse gap-2 justify-around">
-                <dt class="text-sm leading-5 text-gray-500 dark:text-gray-400">Erros mínimos podem comprometer um
+                <dt id="detail_1_s" class="text-sm leading-5 text-gray-500">Erros mínimos podem comprometer um
                   sistema
                   inteiro. Ser detalhista é fundamental para identificar bugs e garantir a precisão do código.</dt>
-                <dd class="text-xl font-bold leading-5 tracking-tight text-white">Atenção aos Detalhes</dd>
+                <dd id="details_11_s" class="text-xl font-bold leading-5 tracking-tight text-white">Atenção aos Detalhes
+                </dd>
               </div>
               <div class="flex flex-col-reverse gap-2 justify-around">
-                <dt class="text-sm leading-5 text-gray-500 dark:text-gray-400">Projetos de software são muitas vezes
+                <dt id="detail_2_s" class="text-sm leading-5 text-gray-500">Projetos de software são muitas vezes
                   colaborativos. Saber trabalhar em equipe e comunicar-se bem com colegas, designers e gerentes é
                   essencial.</dt>
-                <dd class="text-xl font-bold leading-5 tracking-tight text-white">Colaboração</dd>
+                <dd id="details_22_s" class="text-xl font-bold leading-5 tracking-tight text-white">Colaboração</dd>
               </div>
               <div class="flex flex-col-reverse gap-2 justify-around">
-                <dt class="text-sm leading-5 text-gray-500 dark:text-gray-400">Como as tecnologias mudam rapidamente, o
+                <dt id="detail_3_s" class="text-sm leading-5 text-gray-500">Como as tecnologias mudam rapidamente, o
                   aprendizado constante é uma parte fundamental do trabalho de qualquer programador.</dt>
-                <dd class="text-xl font-bold leading-5 tracking-tight text-white">Aprender Continuamente</dd>
+                <dd id="details_33_s" class="text-xl font-bold leading-5 tracking-tight text-white">Aprender
+                  Continuamente</dd>
               </div>
               <div class="flex flex-col-reverse gap-2 justify-around">
-                <dt class="text-sm leading-5 text-gray-500 dark:text-gray-400">Um código limpo, bem documentado e
+                <dt id="detail_4_s" class="text-sm leading-5 text-gray-500">Um código limpo, bem documentado e
                   organizado é mais fácil de ser mantido e compreendido por outros desenvolvedores.</dt>
-                <dd class="text-xl font-bold leading-5 tracking-tight text-white">Organização</dd>
+                <dd id="details_44_s" class="text-xl font-bold leading-5 tracking-tight text-white">Organização</dd>
               </div>
             </dl>
           </div>
         </div>
       </div>
-      <ol id="cursos" class="items-center md:grid md:grid-cols-2 lg:flex  my-[90px] mx-auto max-w-7xl md:max-w-3xl lg:max-w-7xl">
+      <ol id="cursos"
+        class="items-center md:grid md:grid-cols-2 lg:flex  my-[90px] mx-auto max-w-7xl md:max-w-3xl lg:max-w-7xl">
         <li class="relative mb-6 lg:mb-0 mx-auto max-w-3xl lg:mx-0">
           <div class="flex items-center">
             <div
-              class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-              <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 sm:ring-8 shrink-0">
+              <svg class="w-2.5 h-2.5 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
               </svg>
             </div>
-            <div class="absolute hidden lg:flex w-full bg-blue-500 h-0.5 dark:bg-blue-700"></div>
+            <div class="absolute hidden lg:flex w-full bg-blue-500 h-0.5"></div>
           </div>
           <div class="mt-3 sm:pe-8">
-            <h3 class="text-lg font-semibold text-blue-900 dark:text-white py-3">Ciencia da Computação</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Janeiro 2022 -
-              2026</time>
-            <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+            <h3 id="title_c_1" class="text-lg font-semibold text-blue-900 py-3">Cursos Online</h3>
+            <time id="time_c_1" class="block mb-2 text-sm font-normal leading-none text-gray-400">Desde 2023 -
+            </time>
+            <p id="description_c_1" class="text-base font-normal text-gray-500">Curso focado em desenvolver apps mobile tanto Android e IOS,
+              e boas práticas de design responsivo.</p>
+          </div>
+        </li>
+        <li class="relative mb-6 lg:mb-0 mx-auto max-w-3xl lg:mx-0">
+          <div class="flex items-center">
+            <div
+              class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 sm:ring-8 shrink-0">
+              <svg class="w-2.5 h-2.5 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+              </svg>
+            </div>
+            <div class="absolute hidden lg:flex w-full bg-blue-500 h-0.5"></div>
+          </div>
+          <div class="mt-3 sm:pe-8">
+            <h3 id="title_c_2" class="text-lg font-semibold text-blue-900 py-3">Ciencia da Computação</h3>
+            <time id="time_c_2" class="block mb-2 text-sm font-normal leading-none text-gray-400">Janeiro 2022 - 2026</time>
+            <p id="description_c_2" class="text-base font-normal text-gray-500">
               Explorando fundamentos teóricos e práticos com foco em desenvolvimento de aplicativos mobile.
             </p>
           </div>
@@ -104,64 +154,43 @@
         <li class="relative mb-6 lg:mb-0 mx-auto max-w-3xl lg:mx-0">
           <div class="flex items-center">
             <div
-              class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-              <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+              class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 sm:ring-8 shrink-0">
+              <svg class="w-2.5 h-2.5 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor" viewBox="0 0 20 20">
                 <path
                   d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
               </svg>
             </div>
-            <div class="absolute hidden lg:flex w-full bg-blue-500 h-0.5 dark:bg-gray-700"></div>
+            <div class="absolute hidden lg:flex w-full bg-blue-500 h-0.5"></div>
           </div>
           <div class="mt-3 sm:pe-8">
-            <h3 class="text-lg font-semibold text-blue-900 dark:text-white py-3">Cursos Online</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Desde 2023 -
-            </time>
-            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Cursos focados em desenvolvimento mobile,
-              com ênfase em frameworks como Android e iOS, e boas práticas de design responsivo.</p>
-
-          </div>
-        </li>
-        <li class="relative mb-6 lg:mb-0 mx-auto max-w-3xl lg:mx-0">
-          <div class="flex items-center">
-            <div
-              class="z-10 flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full ring-0 ring-blue-500 dark:bg-blue-900 sm:ring-8 dark:ring-gray-900 shrink-0">
-              <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                <path
-                  d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-              </svg>
-            </div>
-            <div class="absolute hidden lg:flex w-full bg-blue-500 h-0.5 dark:bg-gray-700"></div>
-          </div>
-          <div class="mt-3 sm:pe-8">
-            <h3 class="text-lg font-semibold text-blue-900 dark:text-white py-3">Curso Técnico Informática</h3>
-            <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Graduado</time>
-            <p class="text-base font-normal text-gray-500 dark:text-gray-400">Formação técnica com foco no
-              desenvolvimento
-              de software, linguagens de programação, lógica e banco de dados.</p>
+            <h3 id="title_c_3" class="text-lg font-semibold text-blue-900 py-3">Curso Técnico Informática</h3>
+            <time id="time_c_3" class="block mb-2 text-sm font-normal leading-none text-gray-400">Graduado</time>
+            <p id="description_c_3" class="text-base font-normal text-gray-500">Formação técnica com foco no
+              desenvolvimento web, linguagens de programação, lógica e banco de dados.</p>
           </div>
         </li>
       </ol>
-      <div id="ideias" class="component mx-auto bg-black md:max-w-3xl lg:max-w-7xl">
-        <blockquote class="relative text-white text-center p-5 md:p-10 w-full m-1">
+      <div id="ideias" class="component mx-auto bg-black md:max-w-3xl lg:max-w-7xl my-[70px]">
+        <blockquote id="citation" class="relative text-white text-center p-5 md:p-10 w-full m-1">
           "Cada bug que você resolve não é apenas um erro corrigido, mas uma oportunidade de aprender e se tornar um
           programador ainda mais habilidoso."
         </blockquote>
       </div>
-      <div id="habilidades" class="my-[40px] md:max-w-3xl lg:max-w-7xl mx-auto">
+      <div id="skills" class="my-[40px] md:max-w-3xl lg:max-w-7xl mx-auto pt-20">
         <div class="flex items-center justify-start gap-2">
           <h3 class="text-white">Skills</h3>
           <div class="bg-blue-500 w-[150px] h-[2px]"></div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <div class="flex justify-center items-center">
-            <img class="w-[250px] h-[400px]" src="./images/back.png" alt="backgrund">
+          <div class="relative flex justify-center items-center">
+            <img class="w-full z-10 absolute" src="./images/skills.png" alt="design">
+            <img class="w-[250px] z-20 h-[400px]" src="./images/back.png" alt="backgrund">
           </div>
           <div class="grid grid-cols-2 gap-1">
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
-                <span>Design</span>
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
+                <span class="p-1">Design</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
                 <span class="text-sm" class="text-sm">-> XML (Layouts Android)</span>
@@ -171,7 +200,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>Databases</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -182,7 +211,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>UI Frameworks</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -193,7 +222,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>APIs</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -202,16 +231,16 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>Language</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
-                <span class="text-sm">Principal Kotlin</span>
-                <span class="text-sm">Java (suporte legado)</span>
+                <span class="text-sm">-> Principal Kotlin</span>
+                <span class="text-sm">-> Java (suporte legado)</span>
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>Front-end</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -220,7 +249,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>Back-end</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -229,7 +258,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>State Maagement</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -239,7 +268,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>Version Control</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -247,7 +276,7 @@
               </div>
             </div>
             <div>
-              <div class="title_skill bg-blue-600/30 border-[1px] text-white px-1">
+              <div class="title_skill bg-blue-600/30 border-[1px] text-white p-1 px-2">
                 <span>Testing</span>
               </div>
               <div class="border-[1px] skills flex flex-col text-white p-1">
@@ -261,10 +290,10 @@
       </div>
     </section>
 
-    <section id="projects" class="mt-[60px] w-full md:max-w-3xl lg:max-w-7xl mx-auto">
+    <section id="portfolio" class="mt-[60px] w-full md:max-w-3xl lg:max-w-7xl mx-auto px-3 pt-20">
       <div class="flex justify-between items-center">
         <div class="flex items-center gap-2">
-          <h3 class="text-white">Projects</h3>
+          <h3 id="title_p" class="text-white">Projetos</h3>
           <div class="bg-blue-500 w-[150px] h-[2px] hidden sm:block"></div>
         </div>
         <div class="flex items-center gap-2">
@@ -275,8 +304,8 @@
         </div>
       </div>
       <div class="my-4"></div>
-      <div id="projetos" class="portfolio-container grid grid-cols-1 ssm:grid-cols-2 sm:grid-cols-2 gap-4 my-6 md:grid-cols-2 lg:grid-cols-3">
-        <div class="card border-[1px] shadow-sm shadow-blue-500 border-blue-500 hover:scale-105 hover:transition-all rounded-md">
+      <div id="projetos" class="portfolio-container grid grid-cols-1 ssm:grid-cols-1 sm:grid-cols-2 gap-4 my-6 md:grid-cols-2 lg:grid-cols-3">
+        <div class="card flex flex-col h-full max-h-[500px] min-h-[350px] overflow-hidden border-[1px] shadow-sm shadow-blue-500 border-blue-500 hover:scale-105 hover:transition-all rounded-md">
           <div class="presenter_card">
             <img src="./images/fotobase.png" alt="fotobase" class="image_modifier">
           </div>
@@ -287,43 +316,40 @@
               <li class="text-sm">-> Supabase</li>
             </ul>
           </div>
-          <div class="description_card p-2 pb-3 text-white">
+          <div class="description_card grow flex flex-col justify-between p-2 pb-3 text-white">
             <div class="flex items-center justify-between pb-3">
-              <h3 class="font-bold text-lg">Movie APP</h3>
+              <h3 class="font-bold text-lg">FitverseAI</h3>
               <div class="w-[10px] h-[10px] bg-red-500 shadow-md shadow-red-500 rounded-full"></div>
             </div>
-            <p class="text-sm">Aplicativo para pessoas que frequentam academia. Ajudando a maximizar os resultados com
+            <p id="description_p_1" class="text-sm">Aplicativo para pessoas que frequentam academia. Ajudando a maximizar os resultados com
               integração IA</p>
             <div class="py-3"></div>
-            <ul class="">
-              <button class="py-1 text-sm rounded-sm hover:text-blue-500">Acompanhar</button>
-            </ul>
+            <button class="py-1 text-sm rounded-sm hover:text-blue-500 text-start">Acompanhar</button>
           </div>
         </div>
-        <div class="card border-[1px] shadow-sm shadow-blue-500 border-blue-500 hover:scale-105 hover:transition-all rounded-md">
-          <div class="presenter_card">
+        <div class="card flex flex-col h-full max-h-[500px] min-h-[350px] overflow-hidden border-[1px] shadow-sm shadow-blue-500 border-blue-500 hover:scale-105 hover:transition-all rounded-md">
+          <div class="presenter_card flex-none">
             <img src="./images/fotobase.png" alt="fotobase" class="image_modifier">
           </div>
-          <div class="stack_card">
+          <div class="stack_card flex-none">
             <ul class="flex gap-2 border-t-[1px] border-b-[1px] text-blue-700 text-sm justify-center py-1">
               <li class="text-sm">-> Android(XML)</li>
               <li class="text-sm">-> Firebase</li>
               <li class="text-sm">-> MVVM</li>
             </ul>
           </div>
-          <div class="description_card p-2 pb-3 text-white">
+          <div class="description_card grow flex flex-col justify-between p-2 pb-3 text-white">
             <div class="flex items-center justify-between pb-3">
               <h3 class="font-bold text-lg">Movie APP</h3>
               <div class="w-[10px] h-[10px] bg-green-500 shadow-md shadow-green-500 rounded-full"></div>
             </div>
             <p class="text-sm">Aplicativo que consome API fazendo buscas de filmes por categoria e específicos</p>
+            
             <div class="py-3"></div>
-            <ul class="">
-              <button class="py-1 text-sm rounded-sm hover:text-blue-500">Github</button>
-            </ul>
+            <button class="py-1 text-sm rounded-sm hover:text-blue-500 text-start">Github</button>
           </div>
         </div>
-        <div class="card border-[1px] shadow-sm shadow-blue-500 border-blue-500 hover:scale-105 hover:transition-all rounded-md">
+        <div class="card flex flex-col h-full max-h-[500px] min-h-[350px] overflow-hidden border-[1px] shadow-sm shadow-blue-500 border-blue-500 hover:scale-105 hover:transition-all rounded-md">
           <div class="presenter_card">
             <img src="./images/fotobase.png" alt="fotobase" class="image_modifier">
           </div>
@@ -334,30 +360,28 @@
               <li class="text-sm">-> Kotlin</li>
             </ul>
           </div>
-          <div class="description_card p-2 pb-3 text-white">
+          <div class="description_card grow flex flex-col justify-between p-2 pb-3 text-white">
             <div class="flex items-center justify-between pb-3">
               <h3 class="font-bold text-lg">Burger APP</h3>
               <div class="w-[10px] h-[10px] bg-green-500 shadow-md shadow-green-500 rounded-full"></div>
             </div>
             <p class="text-sm">Meu primeiro APP com funcionalidade de buscar uma lista de hamburgeres da API</p>
             <div class="py-3"></div>
-            <ul class="">
-              <button class="py-1 text-sm rounded-sm hover:text-blue-500">Github</button>
-            </ul>
+            <button class="py-1 text-sm rounded-sm hover:text-blue-500 text-start">Github</button>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="w-full dark:bg-gray-800 mt-[65px] mb-[30px]">
+    <footer class="w-full mt-[65px] mb-[30px]">
       <div class="w-full sm:flex  sm:items-center sm:justify-between gap-10">
-        <span class="text-sm justify-center text-gray-500 sm:text-center dark:text-gray-400 flex gap-2">© 2024
+        <span class="text-sm justify-center text-gray-500 sm:text-center flex gap-2">© 2024
           <a class="text-gray-200 hover:text-blue-900" href="#">
             Portfolio by Rafael
           </a>
           <img class="w-4 h-4" src="./images/svg_fire.svg" alt="svg_fire">
         </span>
-        <ul class="flex items-center justify-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <ul class="flex items-center justify-center mt-3 text-sm font-medium text-gray-500 sm:mt-0">
           <li>
             <a href="#" class="me-4 md:me-6 flex items-center gap-2 hover:text-blue-900">
               <i class="devicon_ devicon-github-original"></i>
@@ -374,8 +398,10 @@
       </div>
     </footer>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./assets/languages.js"></script>
+  <script src="./assets/jquery.js"></script>
 </body>
 
-</ht
+</html>
