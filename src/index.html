@@ -14,19 +14,16 @@
 <body>
   <div class="fixed top-0 w-full bg-black text-white z-50">
     <div class="container mx-auto px-4 flex justify-between items-center h-16">
-      <!-- Logo -->
       <div class="logo flex items-center">
         <img src="./images/logo.png" alt="Logo" class="w-10 h-10">
         <span class="ml-2 font-bold text-lg">RafaDev</span>
       </div>
-      <!-- Botão para mobile -->
       <button id="menuToggle" class="md:hidden text-white focus:outline-none">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-6 h-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </button>
-      <!-- Menu -->
       <div id="menu"
         class="hidden absolute py-2 md:relative top-16 md:top-0 left-0 w-full bg-black md:bg-transparent md:w-auto md:flex md:gap-6">
         <ul class="flex flex-col md:flex-row gap-4 md:gap-6 text-center items-center p-4 md:p-0">
@@ -35,7 +32,6 @@
           <li><a href="#skills" id="item_skills_menu" class="menu-item hover:text-blue-500">hablidades</a></li>
           <li><a href="#portfolio" id="items_portfolio_menu" class="menu-item hover:text-blue-500">Portfolio</a></li>
         </ul>
-        <!-- Seletor de idioma -->
         <div class="flex justify-center md:justify-start mt-4 md:mt-0">
           <select id="languageSelect" class="p-2 text-black rounded-lg">
             <option value="PT" selected>Português</option>
@@ -47,7 +43,7 @@
     </div>
   </div>
 
-  <div class="p-4 max-w-[1080px] mx-auto">
+  <main class="p-4 max-w-[1080px] mx-auto">
     <section id="home" class="lg:px-4 pt-20">
       <div class="content_home px-3 mt-[40px] flex flex-col lg:flex-row gap-6 items-center justify-between">
         <img src="./images/person.png" alt="developer mobile" width="400px" height="400px"
@@ -298,7 +294,7 @@
         </div>
         <div class="flex items-center gap-2">
           <h3 class="text-white">
-            <a class="text-sm" href="#">Ver todos</a>
+            <a id="subtitle_p" class="text-sm" href="#">Ver todos</a>
           </h3>
           <div class="bg-red-500 w-[100px] h-[2px] hidden sm:block"></div>
         </div>
@@ -343,7 +339,7 @@
               <h3 class="font-bold text-lg">Movie APP</h3>
               <div class="w-[10px] h-[10px] bg-green-500 shadow-md shadow-green-500 rounded-full"></div>
             </div>
-            <p class="text-sm">Aplicativo que consome API fazendo buscas de filmes por categoria e específicos</p>
+            <p id="description_p_2" class="text-sm">Aplicativo que consome API fazendo buscas de filmes por categoria e específicos</p>
             
             <div class="py-3"></div>
             <button class="py-1 text-sm rounded-sm hover:text-blue-500 text-start">Github</button>
@@ -365,7 +361,7 @@
               <h3 class="font-bold text-lg">Burger APP</h3>
               <div class="w-[10px] h-[10px] bg-green-500 shadow-md shadow-green-500 rounded-full"></div>
             </div>
-            <p class="text-sm">Meu primeiro APP com funcionalidade de buscar uma lista de hamburgeres da API</p>
+            <p id="description_p_3" class="text-sm">Meu primeiro APP com funcionalidade de buscar uma lista de hamburgeres da API</p>
             <div class="py-3"></div>
             <button class="py-1 text-sm rounded-sm hover:text-blue-500 text-start">Github</button>
           </div>
@@ -397,7 +393,7 @@
         </ul>
       </div>
     </footer>
-  </div>
+  </main>
   <script src="script.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="./assets/languages.js"></script>
